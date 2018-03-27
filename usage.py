@@ -1,9 +1,6 @@
 import plotly_example
 import dash
 import dash_html_components as html
-import os
-
-from flask import send_from_directory
 
 app = dash.Dash('')
 
@@ -17,9 +14,7 @@ html.H2('Draggable'),
         children=html.Div(id='some-div', children='this is draggable'),
         axis='both',
         className='draggable'
-    ),
-    html.Link(rel='js',
-                      href='/static/some-bundle.js')
+    )
 ])
 
 

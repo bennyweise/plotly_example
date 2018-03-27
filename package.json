@@ -12,6 +12,8 @@
     "publish-pypi": "npm run prepublish && python setup.py sdist upload",
     "start": "builder run build-dev",
     "test": "builder run check",
+    "test-frontend": "karma start node_modules/dash-components-archetype/config/karma/karma.conf.js",
+    "test-frontend-cov": "karma start node_modules/dash-components-archetype/config/karma/karma.conf.coverage.js",
     "test-watch": "builder run test-frontend-watch",
     "test-debug": "builder run test-frontend-debug",
     "uninstall-local": "pip uninstall plotly-example -y"
