@@ -1,25 +1,27 @@
 import plotly_example
 import dash
 import dash_html_components as html
+import os
+
+from flask import send_from_directory
 
 app = dash.Dash('')
 
 app.scripts.config.serve_locally = True
 
 app.layout = html.Div([
-    plotly_example.ExampleComponent(
-        id='input',
-        value='my-value',
-        label='my-label'
+html.H1('plotly-example-demo'),
+html.Hr(),
+html.H2('Draggable'),
+    plotly_example.Draggable(
+        children=html.Div(id='some-div', children='this is draggable'),
+        axis='both',
+        className='draggable'
     ),
-    html.Div(id='output')
+    html.Link(rel='js',
+                      href='/static/some-bundle.js')
 ])
 
-@app.callback(
-	dash.dependencies.Output('output', 'children'),
-	[dash.dependencies.Input('input', 'value')])
-def display_output(value):
-    return 'You have entered {}'.format(value)
 
 if __name__ == '__main__':
     app.run_server(debug=True)

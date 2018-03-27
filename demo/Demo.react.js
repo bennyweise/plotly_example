@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import {ExampleComponent} from '../src';
+import {Draggable} from '../src';
 
 class Demo extends Component {
     constructor() {
         super();
         this.state = {
             value: ''
-        }
+        };
     }
 
     render() {
@@ -15,12 +15,10 @@ class Demo extends Component {
                 <h1>plotly-example Demo</h1>
 
                 <hr/>
-                <h2>ExampleComponent</h2>
-                <ExampleComponent
-                    label="This is an example label"
-                    value={this.state.value}
-                    setProps={newProps => this.setState({value: newProps.value})}
-                />
+                <h2>Draggable</h2>
+              <Draggable>
+                <div className="box">I can be dragged anywhere</div>
+              </Draggable>
                 <hr/>
             </div>
         );
