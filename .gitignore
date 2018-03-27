@@ -1,0 +1,15 @@
+build/
+coverage/
+dist/
+lib/
+lib/bundle.js*
+node_modules/
+plotly_example/metadata.json
+plotly_example/bundle.js*
+.npm
+vv/
+venv/
+*.pyc
+*.egg-info
+*.log
+.DS_Store
