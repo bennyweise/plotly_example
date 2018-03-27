@@ -1,0 +1,5 @@
+include plotly_example/bundle.js
+include plotly_example/bundle.js.map
+include plotly_example/metadata.json
+include README.md
+include LICENSE.md
